@@ -7,6 +7,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
+app.get('/', (req, res) => {
+  res.send('📝 Welcome to the Inkwell Blog Publishing API!');
+});
+
 import authRouter from "./auth/auth.router.js"
 import postRouter from "./post/post.router.js"
 import CategoryRouter from './category/category.router.js';
